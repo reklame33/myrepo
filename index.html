@@ -1,42 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Booking forespørsel Vormedal Grendahus</title>
-    <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
 </head>
 <body>
-<!-- Tab links -->
+
+<h2>Bookingforespørsel Vormedal Grendahus</h2>
+<p>Velg hvilket rom du ønsker å sjekke om er ledig:</p>
+
 <div class="tab">
-  <button class="tablinks" onclick="openCalendar(event, 'Stordalen')">Storsalen</button>
-  <button class="tablinks" onclick="openCalendar(event, 'Peisestue')">Peisestue</button>
-  <button class="tablinks" onclick="openCalendar(event, 'Grupperom1')">Grupperom1</button>
-  <button class="tablinks" onclick="openCalendar(event, 'Klasserommet')">Klasserommet</button>
+  <button class="tablinks" onclick="openCal(event, 'Storsalen')"id="defaultOpen">Storsalen</button>
+  <button class="tablinks" onclick="openCal(event, 'Peisestue')">Peisestue</button>
+  <button class="tablinks" onclick="openCal(event, 'Grupperom1')">Grupperom 1</button>
+  <button class="tablinks" onclick="openCal(event, 'Klasserommet')">Klasserommet</button>
 </div>
 
-<!-- Tab content -->
 <div id="Storsalen" class="tabcontent">
-  <iframe src="https://calendar.google.com/calendar/embed?height=800&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FOslo&amp;src=OGtwb25oMXNuanUzNzNncjBiZTRjMjhxcmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=NDI3aDJwcmZrMW4ybzNjbmhhNHVjaHA4Y29AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ajBoYm5oOTVoYTVlaXQ3MHB0cmVxa2gycTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=Y2d1YWU5ZzhsNDAyZjBxNjVtNzZianJwYjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%232bae00&amp;color=%230084d0&amp;color=%23a041b7&amp;color=%23795b34&amp;showTitle=1&amp;showNav=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;title=Utleiekalender%20Vormedal%20Grendahus" style="border:solid 1px #777" width="1024" height="800" frameborder="0" scrolling="no"></iframe>
+  <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FOslo&amp;src=Y2d1YWU5ZzhsNDAyZjBxNjVtNzZianJwYjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795b34&amp;showNav=1&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;title=Storsalen" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
 
 <div id="Peisestue" class="tabcontent">
-  <h3>Peisestue</h3>
-  <p>Paris is the capital of France.</p>
+  <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FOslo&amp;showNav=1&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;title=Peisestue&amp;src=ajBoYm5oOTVoYTVlaXQ3MHB0cmVxa2gycTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23a041b7&amp;showTitle=1" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
 
 <div id="Grupperom1" class="tabcontent">
-  <h3>Grupperom1</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>    
+  <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FOslo&amp;showNav=1&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;title=Grupperom%201&amp;showTitle=1&amp;src=OGtwb25oMXNuanUzNzNncjBiZTRjMjhxcmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%232bae00" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
 
 <div id="Klasserommet" class="tabcontent">
-  <h3>Klasserommet</h3>
-  <p>Klasserommet is the capital of Japan.</p>
-</div> 
-    
-    
-<br>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfIaD_D05q_aLxPor5EG1_D8IsF5W3IJ0hGhKF1s9DslVEMTQ/viewform?embedded=true" width="1024" height="1800" frameborder="0" marginheight="0" marginwidth="0">Laster inn …</iframe>
- 
+  <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FOslo&amp;showNav=1&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;title=Klasserommet&amp;showTitle=1&amp;src=NDI3aDJwcmZrMW4ybzNjbmhhNHVjaHA4Y29AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%230084d0" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
+
+
+
+<script>
+function openCal(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
 </body>
-</html>
+</html> 
